@@ -106,7 +106,7 @@ showPage(currentPage);
      // Contenu des 44 sourates en arabe, anglais et français (avec 4 paragraphes pour 1-5 et 44)
     const suraContents = {
         1: {
-            ar: "<span style=\"font-size: 25px;\"><b>المُقَدِّمَة</b></span><br><br>بَعِيدًا عَنْ رُوحِ التَّنَقُّصِ وَقَرِيبًا مِنْ رُوحِ الإِيقَاظِ، أُخَاطِبُكَ يَا رَجُلَ اللهِ، يَا أَخِي فِي الإِيمَانِ، بِدَافِعِ حُبِّ الحَقِيقَةِ وَالاحْتِرَامِ لِغَيْرِ المُسْلِمِينَ، لِأُشَارِكَ مَا حَصَلْتُ عَلَيْهِ بَعْدَ التَّأَمُّلِ فِي كَلِمَةِ اللهِ. مَكْتُوبٌ فِي يُوشَعَ: «لاَ يَبْرَحْ سِفْرُ الشَّرِيعَةِ هَذَا مِنْ فَمِكَ، بَلْ تَهَجَّ بِهِ نَهَارًا وَلَيْلًا، لِتَعْمَلَ بِمَا فِيهِ، فَتَنْجَحَ». قَالَ اللهُ فِي القُرْآنِ: ﴿وَلَقَدْ يَسَّرْنَا الْقُرْآنَ لِلذِّكْرِ فَهَلْ مِنْ مُدَّكِرٍ﴾ (سُورَةُ القَمَرِ، 54:17)<br><br>يَدْعُوكَ هَذَا الكِتَابُ لِرِحْلَةٍ رُوحَانِيَّةٍ سَاحِرَةٍ لِاكْتِشَافِ طَرِيقِ النَّجَاةِ، وَاسْتِكْشَافِ جَوْهَرِكَ العَمِيقِ، وَلِقَاءِ الإِلَهِيِّ فِيكَ، مِنْ خِلَالِ تَحْلِيلَاتٍ مُؤَثِّرَةٍ وَتَأَمُّلَاتٍ خَالِدَةٍ.<br><br>دَعْ حِكْمَةَ الإِسْلَامِ وَتَعَالِيمَهُ الغَنِيَّةَ وَنُورَهُ يَهْدِيكَ نَحْوَ السَّلَامِ وَالتَّحْرِيرِ.<br><br>أَدْعُوكَ لِلْتَحَقُّقِ مِنْ كُلِّ حُجَّةٍ لِتَقْدِيرِ صِدْقِهَا، فَأَنَا مَسْؤُولٌ عَمَّا أَكْتُبُ، لَا عَنْ فَهْمِكَ. اغْمُرْ نَفْسَكَ فِي هَذِهِ الرِّحْلَةِ الرُّوحَانِيَّةِ، اقْرَأْ لِتَفْهَمَ، لَا لِتَمُرَّ فَقَطْ، كَمَا قَالَ عِيسَى: «لَا تَكُنْ كَالفَرَسِ أَوِ البَغْلِ بِلَا فَهْمٍ» (مَزْمُورٌ 32:9). كَانَ اليَهُودُ يَفْحَصُونَ الكُتُبَ المُقَدَّسَةَ لِيَتَحَقَّقُوا مِنَ الحَقِيقَةِ (الأَعْمَالُ)، وَيُوصِي تَسَالُونِيكِي الأَوَّلُ: «لَا تُطْفِئُوا الرُّوحَ، افْحَصُوا كُلَّ شَيْءٍ وَتَمَسَّكُوا بِالصَّالِحِ» (تَسَالُونِيكِي الأَوَّلُ 5:19-21).<br><br>سَوَاءٌ كُنْتَ تَبْحَثُ عَنْ إِجَابَاتٍ أَوْ اتِّصَالٍ أَعْمَقَ، سَيَكُونُ هَذَا الكِتَابُ رَفِيقَكَ الأَمِينَ فِي هَذِهِ الرِّحْلَةِ المُقَدَّسَةِ، يَقُودُكَ إِلَى الوُضُوحِ وَالسَّلَامِ وَالسَّعَادَةِ الأَبَدِيَّةِ.<br><br>مَعَ الاحْتِرَامِ وَالمَحَبَّةِ<br><br>أَحْمَدُ سَعِيدُ عَيْدَارَا<br>",
+            ar: "<span style=\"font-size: 25px;\"><b>مُقَدِّمَةٌ</b></span><br>لا نَقْصِدُ بَعْدَنا عَنْ رُوحِ التَّجْرِيحِ، بَلْ نَقْتَرِبُ مِنْ رُوحِ التَّنْبِيهِ. وَمِنْ هُنا، بِدَافِعِ حُبِّ الحَقِيقَةِ وَالتَّوْقِيرِ لِجَمِيعِ غَيْرِ المُسْلِمِينَ، أُخَاطِبُكُمْ (يَا رَجُلَ اللهِ، يَا أَخِي فِي الإِيمَانِ)، بِنِيَّةٍ صَادِقَةٍ أَنْ لا أَسْمَحَ لِنَفْسِي، بَعْدَ تَأَمُّلِ كَلامِ اللهِ، أَنْ أَحْتَفِظَ بِأَقَلِّ مَا اكْتَسَبْتُ. وَقَدْ كُتِبَ فِي سِفْرِ يُوشَعَ: «لا يَبْرَحْ سِفْرُ التَّوْرَاةِ هَذَا مِنْ فَمِكَ، بَلْ تَهَجَّ بِهِ نَهَارًا وَلَيْلًا، لِكَيْ تَتَحَفَّظَ لِتَعْمَلَ بِكُلِّ مَا كُتِبَ فِيهِ، فَإِنَّكَ حِينَئِذٍ تُفْلِحُ فِي طَرِيقِكَ وَتَنْجَحُ». وَقَالَ اللهُ فِي القُرْآنِ: ﴾وَلَقَدْ يَسَّرْنَا الْقُرْآنَ لِلذِّكْرِ فَهَلْ مِنْ مُدَّكِرٍ﴿ <b>۞</b> (سُورَةُ القَمَرِ: 17).<br><br>انْطَلِقُوا فِي رِحْلَةٍ سَاحِرَةٍ عَبْرَ مَمَرَّاتِ الرُّوحَانِيَّةِ، وَاكْتَشِفُوا طَرِيقَ النَّجَاةِ الَّذِي يَنْتَظِرُكُمْ. هَذَا الكِتَابُ دَعْوَةٌ لِاكْتِشَافِ الذَّاتِ، وَاسْتِكْشَافِ جَوْهَرِنا العَمِيقِ، وَلِقَاءِ الإِلَهِيِّ الَّذِي يَسْكُنُ فِينَا. تَأَمَّلُوا طَرِيقَ النَّجَاةِ، طَرِيقًا مُزَيَّنًا بِالدَّهْشَةِ وَالتَّحَوُّلِ وَالتَّحَرُّرِ.<br><br>دَعُوا أَنْفُسَكُمْ تَنْسَاقُ مَعَ تَحْلِيلَاتٍ مُؤَثِّرَةٍ، وَأَبْوَابٍ تُغَذِّي العَقْلَ، وَتَأَمُّلَاتٍ تَتَجَاوَزُ حُدُودَ الزَّمَنِ وَالمَكَانِ. اسْتَعِدُّوا لِاكْتِشَافِ رُؤًى جَدِيدَةٍ، وَلِفَتْحِ قُلُوبِكُمْ لِوَاقِعٍ أَعْمَقَ وَأَصْدَقَ. اغْمُرُوا أَنْفُسَكُمْ فِي الحِكْمَةِ الحَقِيقِيَّةِ لِلإِسْلامِ، دَعُوا رِحْلَةً رُوحَانِيَّةً تَمَسُّ قُلُوبَكُمْ وَتُنِيرُ طَرِيقَكُمْ، اسْتَكْشِفُوا تَعَالِيمَهُ الغَنِيَّةَ، وَدَعُوا جَمَالَهَا وَنُورَهَا يَمْسَسَانِكُمْ فِي طَرِيقِ النَّجَاةِ.<br><br>أَنْصَحُكُمْ بِالتَّحَقُّقِ مِنْ كُلِّ حُجَّةٍ لِتَقْدِيرِ صِدْقِهَا. أَنَا مَسْؤُولٌ عَمَّا أَكْتُبُ، لَكِنِّي لَسْتُ مَسْؤُولًا عَنْ فَهْمِكُمْ لَهُ. مَعَ ذَلِكَ، لَنْ أَتَوَقَّفَ عَنْ تَوْضِيحِ الأُمُورِ وَتَبْسِيطِ الكَلامِ لِيَكُونَ أَكْثَرَ جَلَاءً.<br><br>لِنَغُصْ سَوِيًّا فِي هَذِهِ المَسْرَحِيَّةِ الَّتِي لا تَتَوَقَّفُ عَنْ دَعْوَتِنا. هَلْ نَكُونُ ضُيُوفًا؟ سَأَكُونُ الكَاتِبَ! أُسَوِّدُ الصَّفَحَاتِ لِأُزَيِّنَ الطَّرِيقَ وَأُنِيرَ الغَمْرَةَ. أُظْلِمُ لِئَلَّا أَغْرَقَ. لِأُخْرِجَ وَأُفَرِّغَ مَعَارِفَنا، أَكْتُبُ بِحُجَجٍ وَبَرَاهِينَ لِأُغَذِّيَ عُقُولَكُمْ وَأُحِيطَ بِفَوْضَاكُمْ. بِالطَّبْعِ، لا فَائِدَةَ مِنَ القِرَاءَةِ لِمُجَرَّدِ المُرُورِ، لَكِنِ اقْرَأُوا لِتَفْهَمُوا.<br><br>افْتَحُوا عُقُولَكُمْ وَدَعُوا الحَقِيقَةَ تَسْكُنُهَا. لا تَتَنَاوَلُوا كُلَّ تَعْلِيمٍ يُقَدَّمُ لَكُمْ ثُمَّ يُطْلَبُ مِنْكُمْ أَنْ تُؤْمِنُوا بِهِ عَمْيَاءً. قَالَ يَسُوعُ: «لا تَكُونُوا كَالْفَرَسِ وَلا كَالْبَغْلِ اللَّذَيْنِ بِلا فَهْمٍ». وَيُذْكَرُ فِي سِفْرِ الأَعْمَالِ أَنَّ اليَهُودَ كَانُوا يَفْحَصُونَ الكُتُبَ يَوْمِيًّا لِيَتَأَكَّدُوا مِنْ صِحَّةِ مَا قِيلَ لَهُمْ. لِذَا، يَجِبُ تَحْلِيلُ كُلِّ شَيْءٍ، كَمَا أُوصِيَ مُؤَخَّرًا فِي سِفْرِ تَسَالُونِيكِي الأَوَّلِ: «لا تُطْفِئُوا الرُّوحَ، لا تَحْتَقِرُوا النُّبُوَّاتِ، لَكِنْ افْحَصُوا كُلَّ شَيْءٍ وَتَمَسَّكُوا بِما هُوَ صَالِحٌ». سَوَاءٌ كُنْتُمْ تَبْحَثُونَ عَنْ إِجَابَاتٍ، أَوْ تَكَامُلٍ رُوحَانِيٍّ، أَوْ مُجَرَّدِ اتِّصَالٍ أَعْمَقَ مَعَ ذَوَاتِكُمْ الدَّاخِلِيَّةِ، فَهَذَا الكِتَابُ سَيَكُونُ رَفِيقَكُمْ الأَمِينَ فِي هَذِهِ الرِّحْلَةِ المُقَدَّسَةِ.<br><br>جَوْهَرُ حِكْمَتِي يَتَلَأْلَأُ فِي تَعَقُّدَاتِ رُوحِي المَذْهُولَةِ. اسْتَعِدُّوا لِتُنْقَلُوا إِلَى آفاقٍ مَجْهُولَةٍ، حَيْثُ الوَضُوحُ وَالسَّلامُ وَالسَّعَادَةُ الأَبَدِيَّةُ تَدْعُوكُمْ. افْتَحُوا قُلُوبَكُمْ وَعُقُولَكُمْ لِفَهْمِ سُطُورِ هَذِهِ الصَّفَحَاتِ، بَيْنَمَا تَكْتَشِفُونَ طَرِيقَ النَّجَاةِ الَّذِي سَيُضِيءُ مَسَارَكُمْ نَحْوَ حَيَاةٍ سَلِيمَةٍ مَمْلُوءَةٍ بِالسَّلامِ وَالطُّمَأْنِينَةِ وَالهُدُوءِ وَالسَّكِينَةِ فِي هَذَا العَالَمِ وَفِي الآخِرَةِ. فَلْنَقْرَأْ بِرُوحِ التَّمْيِيزِ وَلْنَعْتَنِقْ الكَمَالَ الأَخْلاقِيَّ الَّذِي يَنْتَظِرُنَا.<br><br>مَعَ الاحْتِرَامِ وَالمَحَبَّةِ<br><br>أَحْمَدُ سَعِيدُ عَيْدَارَا<br>"
             en: "<span style=\"font-size: 25px;\"><b>Preamble</b></span><br>Far from the spirit of denigration, but close to the spirit of awakening, I address you, man of God, brother in faith, motivated by the love of truth and respect for all non-Muslims, to share what I’ve gained after meditating on God’s word. It is written in Joshua: “This Book of the Law shall not depart from your mouth, but you shall meditate on it day and night, so that you may do all that is written in it, for then you will prosper.” Allah says in the Qur’an: “And We have certainly made the Qur’an easy for remembrance, so is there any who will remember?” (Al-Qamar, 54:17, Sahih International)<br><br>This book invites you to a fascinating spiritual journey to discover the path of salvation, explore your deepest essence, and meet the divine within you, through impactful analyses and timeless reflections.<br><br>Let the wisdom of Islam, its rich teachings, and its light guide you toward peace and liberation.<br><br>I urge you to verify each argument to appreciate its truth, for I am responsible for what I write, not for your understanding. Dive into this spiritual quest, read to understand, not just to pass, as Jesus said: “Do not be like the horse or mule, which have no understanding” (Psalm 32:9, NIV). The Jews examined the Scriptures to verify the truth (Acts), and 1 Thessalonians advises: “Do not quench the Spirit, test everything, hold fast what is good” (1 Thessalonians 5:19-21, NIV).<br><br>Whether seeking answers or a deeper connection, this book will be your faithful companion in this sacred quest, leading you to clarity, peace, and eternal bliss.<br><br>With respect and love<br><br>Ahmed Said Aidara<br>",
     fr: "<span style=\"font-size: 25px;\"><b>Préambule</b></span><br>Loin de nous l’esprit de dénigrer, mais près de nous l’esprit d’éveiller. Ainsi donc, motivé par l’amour de la vérité et le respect que j’ai envers tous les non-musulmans, je m’adresse à vous (homme de Dieu, frère dans la foi), avec la sincère intention de ne me permettre, après avoir médité la parole de Dieu, de garder le minimum que j’ai acquis. Il est écrit dans le livre de Josué ; Que ce livre de la loi ne s’éloigne pas de ta bouche, et médite-le jour et nuit, afin que tu prennes garde à faire selon tout ce qui y est écrit ; car alors, tu feras réussir tes voies, et alors, tu prospéreras. Dieu dit dans le Coran ; Et Nous avons rendu le Coran facile à retenir. L’un de vous souhaite-t-il apprendre ?<br><br>Accédez dans un voyage fascinant à travers les méandres de la spiritualité et découvrez la voie du salut qui vous attend. Ce livre est une invitation à la découverte de soi, à l’exploration de notre essence profonde et à la rencontre avec le divin qui sommeille en nous. Contemplez la voie du salut, une voie parsemée d’émerveillement, de transformation et de libération.<br><br>Laissez-vous porter par des analyses percutantes, des rubriques qui nourrissent l’esprit et des réflexions qui vont au-delà des frontières du temps et de l’espace. Préparez-vous à découvrir des perspectives nouvelles et à vous ouvrir à une réalité plus profonde et plus vraie. Plongez dans la sagesse véritable de l’Islam, laissez-vous guider par une quête spirituelle qui touchera votre cœur et éclairera votre chemin, explorez ses enseignements riches et laissez-vous toucher par la beauté et la lumière qui en émanent, sur la voie du salut.<br><br>Je vous suggère de vérifier chaque argument afin d’apprécier sa véracité. Je suis responsable de ce que j’écris, mais je ne suis point coupable de la compréhension que vous en faites. Néanmoins, je ne cesserai de vous amadouer, de vous éclaircir et de rendre les propos plus clairs.<br><br>Plongeons ensemble dans cette pantomime qui n’arrête de nous inviter. Hôtes serons-nous ? Écrivain serai-je ! Je noircis des pages pour orner le chemin et éclairer l’abysse. Assombrir pour ne pas sombrer. Pour extérioriser et évacuer nos gnoses, j’écris en argument et preuve pour nourrir votre méninge et cerner vos tohu-bohu. Certes, il ne sert à rien de lire pour passer, mais lisez pour comprendre.<br><br>Ouvrez votre esprit et laissez la vérité s’y installer. Ne consommez pas tout enseignement que l’on vous donne et puis on vous recommande de croire aveuglément. Jésus dit ; Ne soyez point comme le cheval, ni comme le mulet, qui sont sans intelligence. On note un passage dans le livre des Actes que les juifs examinaient chaque jour les Écritures pour voir si ce qu’on leur disait était exact. Alors, il faut tout analyser comme il est recommandé dernièrement dans le livre de 1 Thessaloniciens «N’éteignez pas l’esprit, ne méprisez pas les prophéties, mais examinez tout et retenez ce qui est bon. » Que vous soyez en quête de réponses, d’épanouissement spirituel ou simplement d’une connexion plus profonde avec votre être intérieur, ce livre sera votre compagnon fidèle dans cette quête sacrée.<br><br>La quintessence de ma sagacité scintille les anfractuosités de mon farfadet ahuri. Préparez-vous à être transporté vers des horizons ignorés, où la clarté, la paix et la félicité éternelle vous barguignent. Aérez votre cœur et votre esprit pour comprendre les lignes de ces pages, alors que vous découvrez la voie du salut qui étincèlera votre trajectoire vers une vie saine, remplie de paix, de tranquillité, d’apaisement et de pacification dans ce bas monde ainsi que dans l’au-delà. Lisons donc avec l’esprit du discernement et embrassons la plénitude morale qui nous attend.<br><br>Avec respect et amour<br><br>Ahmed Said Aidara<br>"
         },
@@ -402,49 +402,141 @@ sendBtn.onclick = () => {
         indexPage.style.display = 'block';
     });
 
-    document.querySelectorAll('.close-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            if (indexPage.style.display === 'block') {
-                indexPage.style.display = 'none';
-                homePage.style.display = 'block';
-            } else if (settingsPanel.style.display === 'block') {
-                settingsPanel.style.display = 'none';
-                readingPage.style.display = 'block';
-            } else if (favoritesPage.style.display === 'block') {
-                favoritesPage.style.display = 'none';
-                readingPage.style.display = 'block';
-            } else if (notesPage.style.display === 'block') {
-                notesPage.style.display = 'none';
-                readingPage.style.display = 'block';
-            } else if (readingPage.style.display === 'block') {
-                readingPage.style.display = 'none';
-                homePage.style.display = 'block';
+document.querySelectorAll('.close-btn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+        if (indexPage.style.display === 'block') {
+            indexPage.style.display = 'none';
+            homePage.style.display = 'block';
+        } else if (settingsPanel.style.display === 'block') {
+            settingsPanel.style.display = 'none';
+            readingPage.style.display = 'block';
+            // Réinitialiser currentSura si le chapitre actuel est payant
+            if (currentSura >= 10 && currentSura <= 44) {
+                const user = auth.currentUser;
+                if (user) {
+                    const userDoc = await db.collection('users').doc(user.uid).get();
+                    if (!userDoc.exists || !userDoc.data().hasPaid) {
+                        currentSura = 9; // Revenir à un chapitre gratuit
+                    }
+                } else if (localStorage.getItem('hasPaid') !== 'true') {
+                    currentSura = 9; // Revenir à un chapitre gratuit
+                }
             }
-        });
+            loadSuraContent();
+        } else if (favoritesPage.style.display === 'block') {
+            favoritesPage.style.display = 'none';
+            readingPage.style.display = 'block';
+        } else if (notesPage.style.display === 'block') {
+            notesPage.style.display = 'none';
+            readingPage.style.display = 'block';
+        } else if (readingPage.style.display === 'block') {
+            readingPage.style.display = 'none';
+            homePage.style.display = 'block';
+        }
     });
-
-    document.querySelectorAll('.index-page li').forEach(li => {
-        li.addEventListener('click', () => {
-            currentSura = parseInt(li.getAttribute('data-sura'));
+});
+    
+document.querySelectorAll('.index-page li').forEach(li => {
+    li.addEventListener('click', async () => {
+        currentSura = parseInt(li.getAttribute('data-sura'));
+        if (currentSura >= 10 && currentSura <= 44) {
+            // Vérifier si l'utilisateur est connecté et a payé
+            const user = auth.currentUser;
+            if (user) {
+                const userDoc = await db.collection('users').doc(user.uid).get();
+                if (userDoc.exists && userDoc.data().hasPaid) {
+                    loadSuraContent();
+                    indexPage.style.display = 'none';
+                    readingPage.style.display = 'block';
+                } else {
+                    showPaymentModal();
+                }
+            } else {
+                // Vérifier localStorage pour les utilisateurs non connectés
+                if (localStorage.getItem('hasPaid') === 'true') {
+                    loadSuraContent();
+                    indexPage.style.display = 'none';
+                    readingPage.style.display = 'block';
+                } else {
+                    showPaymentModal();
+                }
+            }
+        } else {
             loadSuraContent();
             indexPage.style.display = 'none';
             readingPage.style.display = 'block';
-        });
-    });
-
-    document.querySelector('.prev-btn').addEventListener('click', () => {
-        if (currentSura > 1) {
-            currentSura--;
-            loadSuraContent();
         }
     });
+});
 
-    document.querySelector('.next-btn').addEventListener('click', () => {
-        if (currentSura < 44) {
-            currentSura++;
+// Fonction pour afficher le modal d'achat
+function showPaymentModal() {
+    const modal = document.getElementById('paymentModal');
+    modal.style.display = 'block';
+    currentSura = 9; // Réinitialiser à un chapitre gratuit
+    readingPage.style.display = 'block';
+    indexPage.style.display = 'none';
+    favoritesPage.style.display = 'none';
+    console.log('Modal de paiement affiché, currentSura réinitialisé à 9');
+}
+
+document.querySelector('.prev-btn').addEventListener('click', async () => {
+    if (currentSura > 1) {
+        const prevSura = currentSura - 1;
+        if (prevSura >= 10 && prevSura <= 44) {
+            const user = auth.currentUser;
+            if (user) {
+                const userDoc = await db.collection('users').doc(user.uid).get();
+                if (userDoc.exists && userDoc.data().hasPaid) {
+                    currentSura = prevSura;
+                    loadSuraContent();
+                } else {
+                    showPaymentModal();
+                }
+            } else {
+                if (localStorage.getItem('hasPaid') === 'true') {
+                    currentSura = prevSura;
+                    loadSuraContent();
+                } else {
+                    showPaymentModal();
+                }
+            }
+        } else {
+            currentSura = prevSura;
             loadSuraContent();
         }
-    });
+    }
+});
+    
+document.querySelector('.next-btn').addEventListener('click', async () => {
+    if (currentSura < 44) {
+        const nextSura = currentSura + 1;
+        if (nextSura >= 10 && nextSura <= 44) {
+            // Vérifier si l'utilisateur est connecté et a payé
+            const user = auth.currentUser;
+            if (user) {
+                const userDoc = await db.collection('users').doc(user.uid).get();
+                if (userDoc.exists && userDoc.data().hasPaid) {
+                    currentSura = nextSura;
+                    loadSuraContent();
+                } else {
+                    showPaymentModal();
+                }
+            } else {
+                // Vérifier localStorage pour les utilisateurs non connectés
+                if (localStorage.getItem('hasPaid') === 'true') {
+                    currentSura = nextSura;
+                    loadSuraContent();
+                } else {
+                    showPaymentModal();
+                }
+            }
+        } else {
+            currentSura = nextSura;
+            loadSuraContent();
+        }
+    }
+});
 
     document.querySelector('.settings-btn').addEventListener('click', () => {
         settingsPanel.style.display = 'block';
@@ -524,20 +616,46 @@ sendBtn.onclick = () => {
         }
     });
 
-    function loadFavorites() {
-        favoritesList.innerHTML = '';
-        favorites.forEach(sura => {
-            const li = document.createElement('li');
-            li.textContent = `Chapitre ${sura}`;
-            li.addEventListener('click', () => {
+function loadFavorites() {
+    favoritesList.innerHTML = '';
+    favorites.forEach(async (sura) => {
+        const li = document.createElement('li');
+        li.textContent = `Chapitre ${sura}`;
+        li.addEventListener('click', async () => {
+            if (sura >= 10 && sura <= 44) {
+                // Vérifier si l'utilisateur est connecté et a payé
+                const user = auth.currentUser;
+                if (user) {
+                    const userDoc = await db.collection('users').doc(user.uid).get();
+                    if (userDoc.exists && userDoc.data().hasPaid) {
+                        currentSura = sura;
+                        loadSuraContent();
+                        favoritesPage.style.display = 'none';
+                        readingPage.style.display = 'block';
+                    } else {
+                        showPaymentModal();
+                    }
+                } else {
+                    // Vérifier localStorage pour les utilisateurs non connectés
+                    if (localStorage.getItem('hasPaid') === 'true') {
+                        currentSura = sura;
+                        loadSuraContent();
+                        favoritesPage.style.display = 'none';
+                        readingPage.style.display = 'block';
+                    } else {
+                        showPaymentModal();
+                    }
+                }
+            } else {
                 currentSura = sura;
                 loadSuraContent();
                 favoritesPage.style.display = 'none';
                 readingPage.style.display = 'block';
-            });
-            favoritesList.appendChild(li);
+            }
         });
-    }
+        favoritesList.appendChild(li);
+    });
+}
 
     // Notes
     document.querySelector('.note-btn').addEventListener('click', () => {
@@ -801,41 +919,67 @@ document.querySelectorAll('.color-btn').forEach(btn => {
     });
 });
 
-    // Charger le contenu du chapitre
-    function loadSuraContent(verseIndex = null) {
-        const suraData = suraContents[currentSura] || suraContents[1];
-        suraTitle.textContent = `La Voie du Salut ${currentSura}`;
-        const content = suraData[languageSelect.value] || suraData.fr;
-        const verses = content.split('<br>').filter(verse => verse.trim());
-
-        const html = verses.map((verse, index) =>
-            `<div id="verse-${index + 1}" class="verse">${verse}</div>`
-        ).join('');
-
-        if (languageSelect.value === 'ar') {
-            arabicText.innerHTML = html;
-            textContent.style.display = 'none';
-            arabicText.style.display = 'block';
-        } else {
-            textContent.innerHTML = html;
-            arabicText.style.display = 'none';
-            textContent.style.display = 'block';
-        }
-
-        arabicText.style.fontSize = `${currentFontSize}px`;
-        textContent.style.fontSize = `${currentFontSize}px`;
-        favoriteBtn.textContent = favorites.includes(currentSura) ? '★' : '☆';
-
-        if (verseIndex) {
-            const verseElement = document.getElementById(`verse-${verseIndex}`);
-            if (verseElement) {
-                verseElement.scrollIntoView({ behavior: 'smooth' });
-                verseElement.classList.add('highlight-verse');
-                setTimeout(() => verseElement.classList.remove('highlight-verse'), 2000);
+async function loadSuraContent(verseIndex = null) {
+    console.log('loadSuraContent appelé pour chapitre:', currentSura);
+    if (currentSura >= 10 && currentSura <= 44) {
+        try {
+            const user = auth.currentUser;
+            let hasPaid = false;
+            if (user) {
+                const userDoc = await db.collection('users').doc(user.uid).get();
+                hasPaid = userDoc.exists && userDoc.data().hasPaid;
+                console.log('Utilisateur connecté, hasPaid:', hasPaid);
+            } else {
+                const hasPaidRef = localStorage.getItem('hasPaid');
+                hasPaid = hasPaidRef && (hasPaidRef.startsWith('wave-') || hasPaidRef.startsWith('paypal-'));
+                console.log('Utilisateur non connecté, hasPaid:', hasPaid, 'ref:', hasPaidRef);
             }
+            if (!hasPaid) {
+                currentSura = 9;
+                showPaymentModal();
+                return;
+            }
+        } catch (error) {
+            console.error('Erreur vérification paiement:', error);
+            currentSura = 9;
+            showPaymentModal();
+            return;
         }
     }
 
+    const suraData = suraContents[currentSura] || suraContents[1];
+    suraTitle.textContent = `La Voie du Salut ${currentSura}`;
+    const content = suraData[languageSelect.value] || suraData.fr;
+    const verses = content.split('<br>').filter(verse => verse.trim());
+
+    const html = verses.map((verse, index) =>
+        `<div id="verse-${index + 1}" class="verse">${verse}</div>`
+    ).join('');
+
+    if (languageSelect.value === 'ar') {
+        arabicText.innerHTML = html;
+        textContent.style.display = 'none';
+        arabicText.style.display = 'block';
+    } else {
+        textContent.innerHTML = html;
+        arabicText.style.display = 'none';
+        textContent.style.display = 'block';
+    }
+
+    arabicText.style.fontSize = `${currentFontSize}px`;
+    textContent.style.fontSize = `${currentFontSize}px`;
+    favoriteBtn.textContent = favorites.includes(currentSura) ? '★' : '☆';
+
+    if (verseIndex) {
+        const verseElement = document.getElementById(`verse-${verseIndex}`);
+        if (verseElement) {
+            verseElement.scrollIntoView({ behavior: 'smooth' });
+            verseElement.classList.add('highlight-verse');
+            setTimeout(() => verseElement.classList.remove('highlight-verse'), 2000);
+        }
+    }
+}
+    
 // Charger les paramètres sauvegardés
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme) {
@@ -873,6 +1017,152 @@ if (savedBgColor) {
     document.getElementById('readingPage').style.backgroundColor = '#d2c9a3';
     localStorage.setItem('readerBackgroundColor', '#d2c9a3');
 }
+
+// Gestion du modal d'achat et des pages de paiement
+const paymentModal = document.getElementById('paymentModal');
+const buyButton = document.getElementById('buyButton');
+const loginButton = document.getElementById('loginButton');
+const modalClose = document.querySelector('.modal-close');
+const paymentOptionsPage = document.getElementById('paymentOptionsPage');
+const paymentOptionsClose = document.querySelector('.payment-options-close');
+const wavePaymentButton = document.getElementById('wavePaymentButton');
+const paypalPaymentButton = document.getElementById('paypalPaymentButton');
+const alreadyPaidButton = document.getElementById('alreadyPaidButton');
+const paymentConfirmationPage = document.getElementById('paymentConfirmationPage');
+const confirmPaymentButton = document.getElementById('confirmPaymentButton');
+const paymentReferenceInput = document.getElementById('paymentReferenceInput');
+const tryAgainLink = document.getElementById('tryAgainLink');
+
+buyButton.addEventListener('click', () => {
+    paymentModal.style.display = 'none';
+    paymentOptionsPage.style.display = 'block';
+    console.log('Page de paiement ouverte');
+});
+
+loginButton.addEventListener('click', () => {
+    paymentModal.style.display = 'none';
+    settingsPanel.style.display = 'block';
+    readingPage.style.display = 'none';
+    homePage.style.display = 'none';
+    indexPage.style.display = 'none';
+    favoritesPage.style.display = 'none';
+    notesPage.style.display = 'none';
+    console.log('Page des paramètres ouverte');
+});
+
+modalClose.addEventListener('click', () => {
+    paymentModal.style.display = 'none';
+    readingPage.style.display = 'block';
+    currentSura = 9;
+    loadSuraContent();
+    console.log('Modal de paiement fermé');
+});
+
+paymentOptionsClose.addEventListener('click', () => {
+    paymentOptionsPage.style.display = 'none';
+    readingPage.style.display = 'block';
+    currentSura = 9;
+    loadSuraContent();
+    console.log('Page des options de paiement fermée');
+});
+
+wavePaymentButton.addEventListener('click', () => {
+    const paymentReference = `wave-${Date.now()}`;
+    localStorage.setItem('pendingPaymentReference', paymentReference);
+    localStorage.setItem('intendedChapter', currentSura);
+    window.location.href = 'https://pay.wave.com/m/M_sn_dyIw8DZWV46K/c/sn?amount=2000';
+    console.log('Redirection vers Wave, ref:', paymentReference);
+});
+
+paypalPaymentButton.addEventListener('click', () => {
+    const paymentReference = `paypal-${Date.now()}`;
+    localStorage.setItem('pendingPaymentReference', paymentReference);
+    localStorage.setItem('intendedChapter', currentSura);
+    window.location.href = 'https://paypal.me/AhmedAidara/3.5?country.x=SN&locale.x=fr_XC';
+    console.log('Redirection vers PayPal, ref:', paymentReference);
+});
+
+alreadyPaidButton.addEventListener('click', () => {
+    paymentOptionsPage.style.display = 'none';
+    paymentConfirmationPage.style.display = 'block';
+    console.log('Bouton J’ai payé cliqué');
+});
+
+confirmPaymentButton.addEventListener('click', async () => {
+    const enteredReference = paymentReferenceInput.value.trim();
+    const pendingReference = localStorage.getItem('pendingPaymentReference');
+    console.log('Confirmation, entré:', enteredReference, 'attendu:', pendingReference);
+
+    if (!enteredReference) {
+        alert('Veuillez entrer une référence de paiement valide.');
+        return;
+    }
+
+    if (enteredReference === pendingReference || enteredReference.startsWith('wave-') || enteredReference.startsWith('paypal-')) {
+        try {
+            localStorage.setItem('hasPaid', enteredReference);
+            const user = auth.currentUser;
+            if (user) {
+                await db.collection('users').doc(user.uid).set({
+                    hasPaid: true,
+                    paymentReference: enteredReference
+                }, { merge: true });
+                console.log('Firestore mis à jour pour utilisateur:', user.uid);
+            }
+            const intendedChapter = parseInt(localStorage.getItem('intendedChapter')) || 9;
+            localStorage.removeItem('pendingPaymentReference');
+            localStorage.removeItem('intendedChapter');
+            paymentConfirmationPage.style.display = 'none';
+            readingPage.style.display = 'block';
+            currentSura = intendedChapter >= 10 && intendedChapter <= 44 ? intendedChapter : 9;
+            loadSuraContent();
+            showSuccessMessage();
+        } catch (error) {
+            console.error('Erreur lors de la confirmation:', error);
+            alert('Erreur lors de la confirmation. Veuillez réessayer.');
+        }
+    } else {
+        alert('Référence de paiement incorrecte. Vérifiez votre reçu Wave/PayPal.');
+        paymentReferenceInput.value = '';
+    }
+});
+
+tryAgainLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    paymentConfirmationPage.style.display = 'none';
+    paymentOptionsPage.style.display = 'block';
+    paymentReferenceInput.value = '';
+    console.log('Retour à la page des options de paiement');
+});
+
+// Vérifier l'URL de retour pour la confirmation de paiement
+window.addEventListener('load', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const paymentStatus = urlParams.get('payment');
+    console.log('URL chargée, payment:', paymentStatus);
+    if (paymentStatus === 'success') {
+        paymentConfirmationPage.style.display = 'block';
+        homePage.style.display = 'none';
+        readingPage.style.display = 'none';
+        paymentModal.style.display = 'none';
+        paymentOptionsPage.style.display = 'none';
+        window.history.replaceState({}, '', '/lavoiedusalut1.5/index.html');
+    }
+});
+
+// Gestion du message post-paiement
+function showSuccessMessage() {
+    const successMessage = document.getElementById('paymentSuccessMessage');
+    successMessage.style.display = 'block';
+    setTimeout(() => {
+        successMessage.style.display = 'none';
+    }, 5000);
+}
+
+document.getElementById('closeSuccessMessage').addEventListener('click', () => {
+    document.getElementById('paymentSuccessMessage').style.display = 'none';
+});
+    
     // Initialisation
     loadSuraContent();
     loadFavorites();
