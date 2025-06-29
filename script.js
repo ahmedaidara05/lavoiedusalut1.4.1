@@ -317,6 +317,7 @@ showPage(currentPage);
         }
     };
 
+
     // Gestion du chatbot
     document.querySelector('.ai-btn').addEventListener('click', () => {
         console.log('Bouton AI cliqué');
@@ -402,141 +403,49 @@ sendBtn.onclick = () => {
         indexPage.style.display = 'block';
     });
 
-document.querySelectorAll('.close-btn').forEach(btn => {
-    btn.addEventListener('click', async () => {
-        if (indexPage.style.display === 'block') {
-            indexPage.style.display = 'none';
-            homePage.style.display = 'block';
-        } else if (settingsPanel.style.display === 'block') {
-            settingsPanel.style.display = 'none';
-            readingPage.style.display = 'block';
-            // Réinitialiser currentSura si le chapitre actuel est payant
-            if (currentSura >= 10 && currentSura <= 44) {
-                const user = auth.currentUser;
-                if (user) {
-                    const userDoc = await db.collection('users').doc(user.uid).get();
-                    if (!userDoc.exists || !userDoc.data().hasPaid) {
-                        currentSura = 9; // Revenir à un chapitre gratuit
-                    }
-                } else if (localStorage.getItem('hasPaid') !== 'true') {
-                    currentSura = 9; // Revenir à un chapitre gratuit
-                }
+    document.querySelectorAll('.close-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (indexPage.style.display === 'block') {
+                indexPage.style.display = 'none';
+                homePage.style.display = 'block';
+            } else if (settingsPanel.style.display === 'block') {
+                settingsPanel.style.display = 'none';
+                readingPage.style.display = 'block';
+            } else if (favoritesPage.style.display === 'block') {
+                favoritesPage.style.display = 'none';
+                readingPage.style.display = 'block';
+            } else if (notesPage.style.display === 'block') {
+                notesPage.style.display = 'none';
+                readingPage.style.display = 'block';
+            } else if (readingPage.style.display === 'block') {
+                readingPage.style.display = 'none';
+                homePage.style.display = 'block';
             }
-            loadSuraContent();
-        } else if (favoritesPage.style.display === 'block') {
-            favoritesPage.style.display = 'none';
-            readingPage.style.display = 'block';
-        } else if (notesPage.style.display === 'block') {
-            notesPage.style.display = 'none';
-            readingPage.style.display = 'block';
-        } else if (readingPage.style.display === 'block') {
-            readingPage.style.display = 'none';
-            homePage.style.display = 'block';
-        }
+        });
     });
-});
-    
-document.querySelectorAll('.index-page li').forEach(li => {
-    li.addEventListener('click', async () => {
-        currentSura = parseInt(li.getAttribute('data-sura'));
-        if (currentSura >= 10 && currentSura <= 44) {
-            // Vérifier si l'utilisateur est connecté et a payé
-            const user = auth.currentUser;
-            if (user) {
-                const userDoc = await db.collection('users').doc(user.uid).get();
-                if (userDoc.exists && userDoc.data().hasPaid) {
-                    loadSuraContent();
-                    indexPage.style.display = 'none';
-                    readingPage.style.display = 'block';
-                } else {
-                    showPaymentModal();
-                }
-            } else {
-                // Vérifier localStorage pour les utilisateurs non connectés
-                if (localStorage.getItem('hasPaid') === 'true') {
-                    loadSuraContent();
-                    indexPage.style.display = 'none';
-                    readingPage.style.display = 'block';
-                } else {
-                    showPaymentModal();
-                }
-            }
-        } else {
+
+    document.querySelectorAll('.index-page li').forEach(li => {
+        li.addEventListener('click', () => {
+            currentSura = parseInt(li.getAttribute('data-sura'));
             loadSuraContent();
             indexPage.style.display = 'none';
             readingPage.style.display = 'block';
+        });
+    });
+
+    document.querySelector('.prev-btn').addEventListener('click', () => {
+        if (currentSura > 1) {
+            currentSura--;
+            loadSuraContent();
         }
     });
-});
 
-// Fonction pour afficher le modal d'achat
-function showPaymentModal() {
-    const modal = document.getElementById('paymentModal');
-    modal.style.display = 'block';
-    currentSura = 9; // Réinitialiser à un chapitre gratuit
-    readingPage.style.display = 'block';
-    indexPage.style.display = 'none';
-    favoritesPage.style.display = 'none';
-    console.log('Modal de paiement affiché, currentSura réinitialisé à 9');
-}
-
-document.querySelector('.prev-btn').addEventListener('click', async () => {
-    if (currentSura > 1) {
-        const prevSura = currentSura - 1;
-        if (prevSura >= 10 && prevSura <= 44) {
-            const user = auth.currentUser;
-            if (user) {
-                const userDoc = await db.collection('users').doc(user.uid).get();
-                if (userDoc.exists && userDoc.data().hasPaid) {
-                    currentSura = prevSura;
-                    loadSuraContent();
-                } else {
-                    showPaymentModal();
-                }
-            } else {
-                if (localStorage.getItem('hasPaid') === 'true') {
-                    currentSura = prevSura;
-                    loadSuraContent();
-                } else {
-                    showPaymentModal();
-                }
-            }
-        } else {
-            currentSura = prevSura;
+    document.querySelector('.next-btn').addEventListener('click', () => {
+        if (currentSura < 44) {
+            currentSura++;
             loadSuraContent();
         }
-    }
-});
-    
-document.querySelector('.next-btn').addEventListener('click', async () => {
-    if (currentSura < 44) {
-        const nextSura = currentSura + 1;
-        if (nextSura >= 10 && nextSura <= 44) {
-            // Vérifier si l'utilisateur est connecté et a payé
-            const user = auth.currentUser;
-            if (user) {
-                const userDoc = await db.collection('users').doc(user.uid).get();
-                if (userDoc.exists && userDoc.data().hasPaid) {
-                    currentSura = nextSura;
-                    loadSuraContent();
-                } else {
-                    showPaymentModal();
-                }
-            } else {
-                // Vérifier localStorage pour les utilisateurs non connectés
-                if (localStorage.getItem('hasPaid') === 'true') {
-                    currentSura = nextSura;
-                    loadSuraContent();
-                } else {
-                    showPaymentModal();
-                }
-            }
-        } else {
-            currentSura = nextSura;
-            loadSuraContent();
-        }
-    }
-});
+    });
 
     document.querySelector('.settings-btn').addEventListener('click', () => {
         settingsPanel.style.display = 'block';
@@ -616,46 +525,20 @@ document.querySelector('.next-btn').addEventListener('click', async () => {
         }
     });
 
-function loadFavorites() {
-    favoritesList.innerHTML = '';
-    favorites.forEach(async (sura) => {
-        const li = document.createElement('li');
-        li.textContent = `Chapitre ${sura}`;
-        li.addEventListener('click', async () => {
-            if (sura >= 10 && sura <= 44) {
-                // Vérifier si l'utilisateur est connecté et a payé
-                const user = auth.currentUser;
-                if (user) {
-                    const userDoc = await db.collection('users').doc(user.uid).get();
-                    if (userDoc.exists && userDoc.data().hasPaid) {
-                        currentSura = sura;
-                        loadSuraContent();
-                        favoritesPage.style.display = 'none';
-                        readingPage.style.display = 'block';
-                    } else {
-                        showPaymentModal();
-                    }
-                } else {
-                    // Vérifier localStorage pour les utilisateurs non connectés
-                    if (localStorage.getItem('hasPaid') === 'true') {
-                        currentSura = sura;
-                        loadSuraContent();
-                        favoritesPage.style.display = 'none';
-                        readingPage.style.display = 'block';
-                    } else {
-                        showPaymentModal();
-                    }
-                }
-            } else {
+    function loadFavorites() {
+        favoritesList.innerHTML = '';
+        favorites.forEach(sura => {
+            const li = document.createElement('li');
+            li.textContent = `Chapitre ${sura}`;
+            li.addEventListener('click', () => {
                 currentSura = sura;
                 loadSuraContent();
                 favoritesPage.style.display = 'none';
                 readingPage.style.display = 'block';
-            }
+            });
+            favoritesList.appendChild(li);
         });
-        favoritesList.appendChild(li);
-    });
-}
+    }
 
     // Notes
     document.querySelector('.note-btn').addEventListener('click', () => {
@@ -919,67 +802,41 @@ document.querySelectorAll('.color-btn').forEach(btn => {
     });
 });
 
-async function loadSuraContent(verseIndex = null) {
-    console.log('loadSuraContent appelé pour chapitre:', currentSura);
-    if (currentSura >= 10 && currentSura <= 44) {
-        try {
-            const user = auth.currentUser;
-            let hasPaid = false;
-            if (user) {
-                const userDoc = await db.collection('users').doc(user.uid).get();
-                hasPaid = userDoc.exists && userDoc.data().hasPaid;
-                console.log('Utilisateur connecté, hasPaid:', hasPaid);
-            } else {
-                const hasPaidRef = localStorage.getItem('hasPaid');
-                hasPaid = hasPaidRef && (hasPaidRef.startsWith('wave-') || hasPaidRef.startsWith('paypal-'));
-                console.log('Utilisateur non connecté, hasPaid:', hasPaid, 'ref:', hasPaidRef);
+    // Charger le contenu du chapitre
+    function loadSuraContent(verseIndex = null) {
+        const suraData = suraContents[currentSura] || suraContents[1];
+        suraTitle.textContent = `La Voie du Salut ${currentSura}`;
+        const content = suraData[languageSelect.value] || suraData.fr;
+        const verses = content.split('<br>').filter(verse => verse.trim());
+
+        const html = verses.map((verse, index) =>
+            `<div id="verse-${index + 1}" class="verse">${verse}</div>`
+        ).join('');
+
+        if (languageSelect.value === 'ar') {
+            arabicText.innerHTML = html;
+            textContent.style.display = 'none';
+            arabicText.style.display = 'block';
+        } else {
+            textContent.innerHTML = html;
+            arabicText.style.display = 'none';
+            textContent.style.display = 'block';
+        }
+
+        arabicText.style.fontSize = `${currentFontSize}px`;
+        textContent.style.fontSize = `${currentFontSize}px`;
+        favoriteBtn.textContent = favorites.includes(currentSura) ? '★' : '☆';
+
+        if (verseIndex) {
+            const verseElement = document.getElementById(`verse-${verseIndex}`);
+            if (verseElement) {
+                verseElement.scrollIntoView({ behavior: 'smooth' });
+                verseElement.classList.add('highlight-verse');
+                setTimeout(() => verseElement.classList.remove('highlight-verse'), 2000);
             }
-            if (!hasPaid) {
-                currentSura = 9;
-                showPaymentModal();
-                return;
-            }
-        } catch (error) {
-            console.error('Erreur vérification paiement:', error);
-            currentSura = 9;
-            showPaymentModal();
-            return;
         }
     }
 
-    const suraData = suraContents[currentSura] || suraContents[1];
-    suraTitle.textContent = `La Voie du Salut ${currentSura}`;
-    const content = suraData[languageSelect.value] || suraData.fr;
-    const verses = content.split('<br>').filter(verse => verse.trim());
-
-    const html = verses.map((verse, index) =>
-        `<div id="verse-${index + 1}" class="verse">${verse}</div>`
-    ).join('');
-
-    if (languageSelect.value === 'ar') {
-        arabicText.innerHTML = html;
-        textContent.style.display = 'none';
-        arabicText.style.display = 'block';
-    } else {
-        textContent.innerHTML = html;
-        arabicText.style.display = 'none';
-        textContent.style.display = 'block';
-    }
-
-    arabicText.style.fontSize = `${currentFontSize}px`;
-    textContent.style.fontSize = `${currentFontSize}px`;
-    favoriteBtn.textContent = favorites.includes(currentSura) ? '★' : '☆';
-
-    if (verseIndex) {
-        const verseElement = document.getElementById(`verse-${verseIndex}`);
-        if (verseElement) {
-            verseElement.scrollIntoView({ behavior: 'smooth' });
-            verseElement.classList.add('highlight-verse');
-            setTimeout(() => verseElement.classList.remove('highlight-verse'), 2000);
-        }
-    }
-}
-    
 // Charger les paramètres sauvegardés
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme) {
@@ -1017,152 +874,6 @@ if (savedBgColor) {
     document.getElementById('readingPage').style.backgroundColor = '#d2c9a3';
     localStorage.setItem('readerBackgroundColor', '#d2c9a3');
 }
-
-// Gestion du modal d'achat et des pages de paiement
-const paymentModal = document.getElementById('paymentModal');
-const buyButton = document.getElementById('buyButton');
-const loginButton = document.getElementById('loginButton');
-const modalClose = document.querySelector('.modal-close');
-const paymentOptionsPage = document.getElementById('paymentOptionsPage');
-const paymentOptionsClose = document.querySelector('.payment-options-close');
-const wavePaymentButton = document.getElementById('wavePaymentButton');
-const paypalPaymentButton = document.getElementById('paypalPaymentButton');
-const alreadyPaidButton = document.getElementById('alreadyPaidButton');
-const paymentConfirmationPage = document.getElementById('paymentConfirmationPage');
-const confirmPaymentButton = document.getElementById('confirmPaymentButton');
-const paymentReferenceInput = document.getElementById('paymentReferenceInput');
-const tryAgainLink = document.getElementById('tryAgainLink');
-
-buyButton.addEventListener('click', () => {
-    paymentModal.style.display = 'none';
-    paymentOptionsPage.style.display = 'block';
-    console.log('Page de paiement ouverte');
-});
-
-loginButton.addEventListener('click', () => {
-    paymentModal.style.display = 'none';
-    settingsPanel.style.display = 'block';
-    readingPage.style.display = 'none';
-    homePage.style.display = 'none';
-    indexPage.style.display = 'none';
-    favoritesPage.style.display = 'none';
-    notesPage.style.display = 'none';
-    console.log('Page des paramètres ouverte');
-});
-
-modalClose.addEventListener('click', () => {
-    paymentModal.style.display = 'none';
-    readingPage.style.display = 'block';
-    currentSura = 9;
-    loadSuraContent();
-    console.log('Modal de paiement fermé');
-});
-
-paymentOptionsClose.addEventListener('click', () => {
-    paymentOptionsPage.style.display = 'none';
-    readingPage.style.display = 'block';
-    currentSura = 9;
-    loadSuraContent();
-    console.log('Page des options de paiement fermée');
-});
-
-wavePaymentButton.addEventListener('click', () => {
-    const paymentReference = `wave-${Date.now()}`;
-    localStorage.setItem('pendingPaymentReference', paymentReference);
-    localStorage.setItem('intendedChapter', currentSura);
-    window.location.href = 'https://pay.wave.com/m/M_sn_dyIw8DZWV46K/c/sn?amount=2000';
-    console.log('Redirection vers Wave, ref:', paymentReference);
-});
-
-paypalPaymentButton.addEventListener('click', () => {
-    const paymentReference = `paypal-${Date.now()}`;
-    localStorage.setItem('pendingPaymentReference', paymentReference);
-    localStorage.setItem('intendedChapter', currentSura);
-    window.location.href = 'https://paypal.me/AhmedAidara/3.5?country.x=SN&locale.x=fr_XC';
-    console.log('Redirection vers PayPal, ref:', paymentReference);
-});
-
-alreadyPaidButton.addEventListener('click', () => {
-    paymentOptionsPage.style.display = 'none';
-    paymentConfirmationPage.style.display = 'block';
-    console.log('Bouton J’ai payé cliqué');
-});
-
-confirmPaymentButton.addEventListener('click', async () => {
-    const enteredReference = paymentReferenceInput.value.trim();
-    const pendingReference = localStorage.getItem('pendingPaymentReference');
-    console.log('Confirmation, entré:', enteredReference, 'attendu:', pendingReference);
-
-    if (!enteredReference) {
-        alert('Veuillez entrer une référence de paiement valide.');
-        return;
-    }
-
-    if (enteredReference === pendingReference || enteredReference.startsWith('wave-') || enteredReference.startsWith('paypal-')) {
-        try {
-            localStorage.setItem('hasPaid', enteredReference);
-            const user = auth.currentUser;
-            if (user) {
-                await db.collection('users').doc(user.uid).set({
-                    hasPaid: true,
-                    paymentReference: enteredReference
-                }, { merge: true });
-                console.log('Firestore mis à jour pour utilisateur:', user.uid);
-            }
-            const intendedChapter = parseInt(localStorage.getItem('intendedChapter')) || 9;
-            localStorage.removeItem('pendingPaymentReference');
-            localStorage.removeItem('intendedChapter');
-            paymentConfirmationPage.style.display = 'none';
-            readingPage.style.display = 'block';
-            currentSura = intendedChapter >= 10 && intendedChapter <= 44 ? intendedChapter : 9;
-            loadSuraContent();
-            showSuccessMessage();
-        } catch (error) {
-            console.error('Erreur lors de la confirmation:', error);
-            alert('Erreur lors de la confirmation. Veuillez réessayer.');
-        }
-    } else {
-        alert('Référence de paiement incorrecte. Vérifiez votre reçu Wave/PayPal.');
-        paymentReferenceInput.value = '';
-    }
-});
-
-tryAgainLink.addEventListener('click', (e) => {
-    e.preventDefault();
-    paymentConfirmationPage.style.display = 'none';
-    paymentOptionsPage.style.display = 'block';
-    paymentReferenceInput.value = '';
-    console.log('Retour à la page des options de paiement');
-});
-
-// Vérifier l'URL de retour pour la confirmation de paiement
-window.addEventListener('load', () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const paymentStatus = urlParams.get('payment');
-    console.log('URL chargée, payment:', paymentStatus);
-    if (paymentStatus === 'success') {
-        paymentConfirmationPage.style.display = 'block';
-        homePage.style.display = 'none';
-        readingPage.style.display = 'none';
-        paymentModal.style.display = 'none';
-        paymentOptionsPage.style.display = 'none';
-        window.history.replaceState({}, '', '/lavoiedusalut1.5/index.html');
-    }
-});
-
-// Gestion du message post-paiement
-function showSuccessMessage() {
-    const successMessage = document.getElementById('paymentSuccessMessage');
-    successMessage.style.display = 'block';
-    setTimeout(() => {
-        successMessage.style.display = 'none';
-    }, 5000);
-}
-
-document.getElementById('closeSuccessMessage').addEventListener('click', () => {
-    document.getElementById('paymentSuccessMessage').style.display = 'none';
-});
-    
     // Initialisation
     loadSuraContent();
     loadFavorites();
