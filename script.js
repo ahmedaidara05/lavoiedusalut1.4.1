@@ -700,7 +700,7 @@ document.addEventListener('click', (e) => {
 
     // Zoom
     document.querySelector('.zoom-in-btn').addEventListener('click', () => {
-        if (currentFontSize < 50) {
+        if (currentFontSize < 70) {
             currentFontSize += 2;
             fontSize.value = currentFontSize;
             arabicText.style.fontSize = `${currentFontSize}px`;
